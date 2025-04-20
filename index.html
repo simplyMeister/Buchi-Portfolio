@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buchi Onyeachonam - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="shortcut icon" href="Ben.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4AF37",
+              secondary: "#F5DEB3",
+              about: "#FDF8E7",
+              projects: "#F9F5FF",
+              skills: "#F0F7FF",
+              contact: "#FFF5F5",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4AF37",
+              secondary: "#F5DEB3",
+              about: "#FDF8E7",
+              projects: "#F9F5FF",
+              skills: "#F0F7FF",
+              contact: "#FFF5F5",
+
+              // 🌙 Dark Mode Colors
+              dark: {
+                background: "#333333",
+                surface: "#1e1e1e",
+                text: "#e5e5e5",
+                border: "#333333",
+                accent: "#D4AF37", // reusing primary for accent in dark
+              },
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+  </head>
+  <body
+    class="bg-white text-gray-800 border border-gray-200 dark:border-dark-border bg-white dark:bg-dark-surface"
+  >
+    <div class="cursor-custom"></div>
+    <!-- Header/Navbar -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white bg-opacity-80 backdrop-blur-md z-50 shadow-sm transition-all duration-300 dark:bg-dark-surface dark:bg-opacity-90 dark:shadow-md"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">Buchi O.</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="#about"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >Contact</a
+          >
+          <div class="theme-switch ml-4">
+            <div class="theme-switch-handle"></div>
+          </div>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors !rounded-button"
+        >
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+      <!-- Mobile Navigation (Hidden by default) -->
+      <div
+        class="mobile-menu hidden md:hidden bg-white border-t border-gray-100 px-6 py-4"
+      >
+        <nav class="flex flex-col space-y-4">
+          <a
+            href="#about"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Contact</a
+          >
+          <div class="flex items-center mt-2">
+            <span class="text-sm text-gray-500 mr-2">Theme:</span>
+            <div class="theme-switch">
+              <div class="theme-switch-handle"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-green-50/30 animate-gradient"
+        ></div>
+        <!-- 3D Grid -->
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(0, 0, 0, 0.05) 1px,
+              transparent 0
+            );
+            background-size: 40px 40px;
+            transform: perspective(1000px) rotateX(60deg) scale(2.5);
+            transform-origin: center center;
+          "
+        ></div>
+        <!-- Floating Elements -->
+        <div class="absolute inset-0">
+          <!-- Geometric Shapes -->
+          <div
+            class="absolute top-1/4 left-1/4 w-32 h-32 border border-primary/20 !rounded-lg transform rotate-45 animate-float"
+          ></div>
+          <div
+            class="absolute top-1/3 right-1/4 w-24 h-24 border-2 border-secondary/20 rounded-full animate-float animation-delay-1000"
+          ></div>
+          <div
+            class="absolute bottom-1/4 left-1/3 w-40 h-40 border-4 border-primary/10 !rounded-lg transform -rotate-12 animate-float animation-delay-2000"
+          ></div>
+          <!-- Gradient Blobs -->
+          <div
+            class="absolute w-[600px] h-[600px] bg-gradient-to-r from-primary/10 to-secondary/10 !rounded-full blur-3xl animate-blob"
+          ></div>
+          <div
+            class="absolute w-[500px] h-[500px] bg-gradient-to-br from-blue-200/20 to-green-200/20 !rounded-full blur-3xl animate-blob animation-delay-2000"
+          ></div>
+          <div
+            class="absolute w-[400px] h-[400px] bg-gradient-to-tr from-yellow-200/20 to-pink-200/20 !rounded-full blur-3xl animate-blob animation-delay-4000"
+          ></div>
+        </div>
+        <!-- Text Elements -->
+        <div
+          class="absolute inset-0 select-none pointer-events-none overflow-hidden"
+        >
+          <div
+            class="absolute top-[10%] left-[5%] text-9xl font-bold text-primary/5 transform -rotate-12"
+          >
+            
+          </div>
+          <div
+            class="absolute bottom-[15%] right-[5%] text-8xl font-bold text-secondary/5 transform rotate-12"
+          >
+            
+          </div>
+          <div
+            class="absolute top-[40%] right-[15%] text-7xl font-bold text-primary/5 transform rotate-45"
+          >
+            
+          </div>
+        </div>
+        <!-- Particle Effect -->
+        <div class="absolute inset-0">
+          <div id="particles" class="absolute inset-0"></div>
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
+      <div class="container mx-auto px-6 py-24 pt-32 relative z-10">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-12 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 reveal">
+              <span class="block">Hello, I'm</span>
+              <span class="text-primary block mt-2">Buchi Onyeachonam</span>
+            </h1>
+            <div class="h-1 w-24 bg-primary mb-6 reveal"></div>
+            <h2 class="text-xl md:text-2xl text-gray-600 mb-8 reveal">
+              <div class="container">
+              <div class = "typed-text-wrapper">
+              <span class="typed-text"
+                >Junior Frontend Developer & Upcoming UI/UX Designer</span
+              >
+              </div>
+              
+            </h2>
+            <p class="text-gray-600 mb-8 max-w-lg reveal">
+              Crafting exceptional digital experiences through clean code and
+              intuitive design. Specializing in modern frontend technologies and
+              user-centered design principles.
+            </p>
+            <div class="flex flex-wrap gap-4 reveal">
+              <a
+                href="#projects"
+                class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >View My Work</a
+              >
+              <a
+                href="#contact"
+                class="border border-gray-300 px-6 py-3 !rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+                >Get In Touch</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 w-full flex justify-center p-4">
+            <div class="relative w-full max-w-[500px] aspect-square parallax">
+              <div
+                class="absolute -top-4 -left-4 w-full h-full border-2 border-primary !rounded-lg animate-float"
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 !rounded-lg blur-lg animate-float animation-delay-2000"
+              ></div>
+              <div
+                class="absolute inset-4 bg-gradient-to-tr from-white/80 to-white/20 !rounded-lg backdrop-blur-sm animate-float animation-delay-1000"
+              ></div>
+              <img
+                src="Benedict.jpg"
+                alt="Buchi Onyeachonam"
+                class="w-full h-full object-cover !rounded-lg relative z-10"
+              />
+              <!-- Floating Icons -->
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator"
+        >
+          <div
+            class="w-8 h-12 border-2 border-primary !rounded-lg flex justify-center"
+          >
+            <div class="w-1 h-3 bg-primary !rounded-lg mt-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-[#FDF8E7]" dark:bg-dark-surface>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">About Me</h2>
+          <div class="h-1 w-24 bg-primary mx-auto mb-6 reveal"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto reveal">
+            Get to know more about my background, experience, and what drives me
+            as a developer and designer.
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+          <div class="md:w-2/5">
+            <div class="relative">
+              <div
+                class="absolute -top-4 -left-4 w-full h-full border-2 border-primary !rounded-lg"
+              ></div>
+              <img
+                src="Benedict.jpg"
+                alt="Buchi"
+                class="w-full h-auto !rounded-lg shadow-lg relative z-10"
+              />
+            </div>
+          </div>
+          <div class="md:w-3/5">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">Who I Am</h3>
+            <p class="text-gray-600 mb-6">
+              I'm a driven frontend developer and budding UI/UX designer,
+              actively building my skills through hands-on projects and
+              continuous learning. Though early in my journey—with under two
+              years of experience—I focus on creating responsive, user-centered
+              interfaces and improving with each project. Based in Nigeria, I’m
+              passionate about design-driven development and committed to
+              turning ideas into purposeful digital experiences.
+            </p>
+            <p class="text-gray-600 mb-6">
+              My approach combines technical expertise with creative
+              problem-solving. I believe that great design is not just about
+              aesthetics, but about creating intuitive, accessible, and
+              enjoyable user experiences that solve real problems.
+            </p>
+            <p class="text-gray-600 mb-8">
+              When I'm not coding or designing, you can find me creating beats,
+              experimenting with poetry, or exploring the latest web
+              technologies and design trends.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span
+                class="skill-tag bg-[#F5DEB3] text-[#8B7355] px-3 py-1 !rounded-full text-sm"
+                >HTML</span
+              >
+              <span
+                class="skill-tag bg-[#FFE4B5] text-[#8B7355] px-3 py-1 !rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="skill-tag bg-[#F0E68C] text-[#8B7355] px-3 py-1 !rounded-full text-sm"
+                >UI/UX Design</span
+              >
+              <span
+                class="skill-tag bg-[#EEE8AA] text-[#8B7355] px-3 py-1 !rounded-full text-sm"
+                >Mysql</span
+              >
+              <span
+                class="skill-tag bg-[#FAFAD2] text-[#8B7355] px-3 py-1 !rounded-full text-sm"
+                >Figma</span
+              >
+              <span
+                class="skill-tag bg-[#FFFACD] text-[#8B7355] px-3 py-1 !rounded-full text-sm"
+                >Node.js</span
+              >
+              <span
+                class="skill-tag bg-[#F0E68C] text-[#8B7355] px-3 py-1 !rounded-full text-sm"
+                >Bootstrapp</span
+              >
+            </div>
+            <a
+              href="Buchi Onyeachonam Resume .pdf"
+              class="inline-flex items-center gap-2 bg-white border border-gray-300 px-6 py-3 !rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+            >
+              <i
+                class="ri-download-line w-5 h-5 flex items-center justify-center"
+              ></i>
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-[#F9F5FF]" dark:bg-dark-surface>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">
+            My Projects
+          </h2>
+          <div class="h-1 w-24 bg-primary mx-auto mb-6 reveal"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto reveal">
+            A selection of my recent work, showcasing my skills in frontend
+            development.
+          </p>
+        </div>
+        <div class="mb-8 flex justify-center reveal">
+          <div class="inline-flex bg-gray-100 p-1 !rounded-full">
+            <button
+              class="filter-btn active px-4 py-2 !rounded-full bg-white shadow-sm text-primary whitespace-nowrap"
+            >
+              All Projects
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-card bg-white !rounded-lg shadow-md overflow-hidden reveal "
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="ping2.png"
+                alt="Ping Platform"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <span
+                    class="text-xs font-medium bg-primary/80 px-2 py-1 !rounded-full"
+                    >Web App</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Ping Site</h3>
+              <p class="text-gray-600 mb-4">
+                A web application designed to collect and store IP addresses,
+                execute ping requests, and deliver real-time feedback to users
+                on connection success or failure.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >CSS</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <button
+                  class="view-project text-primary hover:text-primary/80 flex items-center gap-1 text-sm !rounded-button whitespace-nowrap"
+                  data-project="1"
+                >
+                  <span>View Details</span>
+                  <i
+                    class="ri-arrow-right-line w-4 h-4 flex items-center justify-center"
+                  ></i>
+                </button>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/simplyMeister"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="project-card bg-white !rounded-lg shadow-md overflow-hidden reveal"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="ecotech.png"
+                alt="Ecotech Website"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <span
+                    class="text-xs font-medium bg-secondary/80 px-2 py-1 !rounded-full"
+                    >Web app</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Ecotech</h3>
+              <p class="text-gray-600 mb-4">
+                A personal project focused on leveraging technology to promote
+                environmental sustainability. Ecotech explores innovative
+                digital solutions to reduce ecological impact
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >CSS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >Js</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <button
+                  class="view-project text-primary hover:text-primary/80 flex items-center gap-1 text-sm !rounded-button whitespace-nowrap"
+                  data-project="2"
+                >
+                  <span>View Details</span>
+                  <i
+                    class="ri-arrow-right-line w-4 h-4 flex items-center justify-center"
+                  ></i>
+                </button>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/simplyMeister"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="project-card bg-white !rounded-lg shadow-md overflow-hidden reveal"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="Ikorodu.png"
+                alt="Church Website"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <span
+                    class="text-xs font-medium bg-primary/80 px-2 py-1 !rounded-full"
+                    >Web App</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">ICOC Ikorodu </h3>
+              <p class="text-gray-600 mb-4">
+                A church website designed to showcase the organization's mission, vision, and activities, while facilitating seamless tithe contributions and enhancing engagement.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >CSS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >JSS</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <button
+                  class="view-project text-primary hover:text-primary/80 flex items-center gap-1 text-sm !rounded-button whitespace-nowrap"
+                  data-project="3"
+                >
+                  <span>View Details</span>
+                  <i
+                    class="ri-arrow-right-line w-4 h-4 flex items-center justify-center"
+                  ></i>
+                </button>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/simplyMeister"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="project-card bg-white !rounded-lg shadow-md overflow-hidden reveal"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="portfolio.png"
+                alt="Portfolio site"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <span
+                    class="text-xs font-medium bg-purple-500/80 px-2 py-1 !rounded-full"
+                    >Web App</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Portfolio Page</h3>
+              <p class="text-gray-600 mb-4">
+                A personal website designed to showcase Buchi Onyeachonam's capabilities as a Frontend Developer, highlighting technical skills, projects, and professional experience.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >CSS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >JS</span
+                >
+                <span
+                class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                >TailwindCSS</span
+              >
+
+              </div>
+              <div class="flex justify-between">
+                <button
+                  class="view-project text-primary hover:text-primary/80 flex items-center gap-1 text-sm !rounded-button whitespace-nowrap"
+                  data-project="4"
+                >
+                  <span>View Details</span>
+                  <i
+                    class="ri-arrow-right-line w-4 h-4 flex items-center justify-center"
+                  ></i>
+                </button>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/simplyMeister"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div
+            class="project-card bg-white !rounded-lg shadow-md overflow-hidden reveal"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="tindog.png" 
+                alt="Real Estate Platform"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <span
+                    class="text-xs font-medium bg-primary/80 px-2 py-1 !rounded-full"
+                    >Web App</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                Tindog
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A fun, interactive platform where dogs can find their perfect playmate or furry soulmate. Pet owners can create profiles for their dogs, matching them with nearby pups.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >CSS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >Bootstrapp</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <button
+                  class="view-project text-primary hover:text-primary/80 flex items-center gap-1 text-sm !rounded-button whitespace-nowrap"
+                  data-project="5"
+                >
+                  <span>View Details</span>
+                  <i
+                    class="ri-arrow-right-line w-4 h-4 flex items-center justify-center"
+                  ></i>
+                </button>
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <i class="https://github.com/simplyMeister"></i>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div
+            class="project-card bg-white !rounded-lg shadow-md overflow-hidden reveal"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="FAQ.png"
+                alt="Front-end Mentor FAQs"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <span
+                    class="text-xs font-medium bg-secondary/80 px-2 py-1 !rounded-full"
+                    >Web App</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                FAQ Page
+              </h3>
+              <p class="text-gray-600 mb-4">
+               A Frequantly Asked Questions Page from Frontend Mentors project
+              </p>
+              <br>
+              <br>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >CSS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-2 py-1 !rounded-sm text-xs"
+                  >JS</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <button
+                  class="view-project text-primary hover:text-primary/80 flex items-center gap-1 text-sm !rounded-button whitespace-nowrap"
+                  data-project="6"
+                >
+                  <span>View Details</span>
+                  <i
+                    class="ri-arrow-right-line w-4 h-4 flex items-center justify-center"
+                  ></i>
+                </button>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/simplyMeister"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="text-center mt-12 reveal">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-white border border-gray-300 px-6 py-3 !rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+          >
+            <span>View All Projects</span>
+            <i
+              class="ri-arrow-right-line w-5 h-5 flex items-center justify-center"
+            ></i>
+          </a>
+        </div>
+      </div> -->
+    </section>
+    <!-- Skills & Experience Section -->
+    <section id="skills" class="py-20 bg-[#F0F7FF]" dark:bg-dark-surface>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">
+            Skills & Experience
+          </h2>
+          <div class="h-1 w-24 bg-primary mx-auto mb-6 reveal"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto reveal">
+            My professional journey and the technologies I specialize in.
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Skills -->
+          <div class="lg:w-1/2 reveal">
+            <h3 class="text-2xl font-bold mb-6 text-gray-800">
+              Technical Skills
+            </h3>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-700"
+                  >Frontend Development</span
+                >
+                <span class="text-primary">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-700">UI/UX Design</span>
+                <span class="text-primary">65%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 65%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-700"
+                  >JavaScript Frameworks</span
+                >
+                <span class="text-primary">30%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 30%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-700">Responsive Design</span>
+                <span class="text-primary">70%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-700"
+                  >Backend Integration</span
+                >
+                <span class="text-primary">10%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 10%"></div>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-6 text-gray-800 mt-12">
+              Tools & Technologies
+            </h3>
+            <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-4">
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-html5-line text-xl"></i>
+                </div>
+                <span class="font-medium">HTML5</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-javascript-line text-xl"></i>
+                </div>
+                <span class="font-medium">JavaScript</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-css3-line text-xl"></i>
+                </div>
+                <span class="font-medium">CSS3</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-javascript-line text-xl"></i>
+                </div>
+                <span class="font-medium">Vue.js</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-css3-line text-xl"></i>
+                </div>
+                <span class="font-medium">TailwindCSS</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="bi bi-info-circle text-xl"></i>
+                </div>
+                <span class="font-medium">Bootstrap</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-git-branch-line text-xl"></i>
+                </div>
+                <span class="font-medium">Git</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-javascript-line text-xl"></i>
+                </div>
+                <span class="font-medium">Node.js</span>
+              </div>
+              
+              <div
+                class="flex flex-wrap items-center gap-3 p-3 bg-white !rounded-lg shadow-sm card22"
+              >
+                <div
+                  class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg"
+                >
+                  <i class="ri-database-2-line text-xl"></i>
+                </div>
+                <span class="font-medium">MySQL</span>
+              </div>
+            </div>
+            
+            <div class="mt-10 space-y-6">
+              <div>
+                <img src="certificate2.png" alt="Certification Image" class="certificate">
+                <p class="cert-title"></p>
+              </div>
+              <div>
+                <img src="certificate3.png" alt="Certification Image" class="certificate">
+                <p class="cert-title"></p>
+              </div>
+            </div>
+          </div>
+            
+          
+
+    
+          <!-- Experience -->
+          <div class="lg:w-1/2 reveal">
+            <h3 class="text-2xl font-bold mb-6 text-gray-800">
+              Work Experience
+            </h3>
+            <div class="space-y-8">
+              <div class="timeline-item pb-8">
+                <div class="mb-2">
+                  <h4 class="text-xl font-bold text-gray-800">
+                    Network Assistant Intern
+                  </h4>
+                  <div class="flex items-center text-gray-600 text-sm mt-1">
+                    <span class="font-medium text-primary"
+                      >Sheraton Hotels & Resorts</span
+                    >
+                    <span class="mx-2">•</span>
+                    <span>2025 - Present</span>
+                  </div>
+                </div>
+                <p class="text-gray-600 mt-3">
+                  A Network Analyst at Sheraton Hotels responsible for
+                  maintaining, monitoring, and optimizing the hotel’s network
+                  infrastructure to ensure high availability, security, and
+                  performance. Key duties include troubleshooting connectivity
+                  issues, managing network devices and configurations,
+                  supporting secure guest and internal network access, and
+                  implementing upgrades to enhance system reliability. Actively
+                  collaborates with IT teams to uphold service quality and
+                  support business operations across the facility
+                </p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span
+                    class="bg-blue-100 text-blue-800 px-2 py-1 !rounded-sm text-xs"
+                    >.bat</span
+                  >
+                </div>
+              </div>
+              <div class="timeline-item pb-8">
+                <div class="mb-2">
+                  <h4 class="text-xl font-bold text-gray-800">
+                    Front-End Developer
+                  </h4>
+                  <div class="flex items-center text-gray-600 text-sm mt-1">
+                    <span class="font-medium text-primary">Ecotech(CEO)</span>
+                    <span class="mx-2">•</span>
+                    <span>2024- present</span>
+                  </div>
+                </div>
+                <p class="text-gray-600 mt-3">
+                  Designed and developed user interfaces for web applications.
+                  Created wireframes, prototypes, and implemented responsive
+                  designs.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span
+                    class="bg-green-100 text-green-800 px-2 py-1 !rounded-sm text-xs"
+                    >Figma</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 px-2 py-1 !rounded-sm text-xs"
+                    >html</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 px-2 py-1 !rounded-sm text-xs"
+                    >css</span
+                  >
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="mb-2">
+                  <h4 class="text-xl font-bold text-gray-800">
+                    Frontend Developer
+                  </h4>
+                  <div class="flex items-center text-gray-600 text-sm mt-1">
+                    <span class="font-medium text-primary">ICOC ikorodu.</span>
+                    <span class="mx-2">•</span>
+                    <span>2025 - Present</span>
+                  </div>
+                </div>
+                <p class="text-gray-600 mt-3">
+                  Developed and maintained a responsive church website to
+                  enhance community engagement, streamline event updates, and
+                  provide easy access to sermons and livestreams. Integrated
+                  user-friendly interfaces and mobile-first designs to ensure
+                  accessibility across all devices. Collaborated with church
+                  leadership to align digital features with ministry goals and
+                  improve overall user experience."
+                </p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span
+                    class="bg-yellow-100 text-yellow-800 px-2 py-1 !rounded-sm text-xs"
+                    >HTML</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 px-2 py-1 !rounded-sm text-xs"
+                    >CSS</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 px-2 py-1 !rounded-sm text-xs"
+                    >JavaScript</span
+                  >
+                </div>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-6 text-gray-800 mt-12">
+              Education & Certifications
+            </h3>
+            <div class="space-y-6">
+              <div class="bg-white p-5 !rounded-lg shadow-sm card21">
+                <div class="flex flex-wrap md:flex-nowrap items-start md:items-center gap-4">
+                  <div
+                    class="w-16 h-16 flex items-center justify-center text-primary bg-blue-50 !rounded-lg flex-shrink-0"
+                  >
+                    <i class="ri-graduation-cap-line text-xl"></i>
+                  </div>
+                  <div class="flex-1 pt-1 md:pt-0">
+                    <h4 class="text-lg font-bold text-gray-800">
+                      Pursuing a Bsc in
+                      <a
+                        href="https://en.wikipedia.org/wiki/Management_information_system"
+                        class="MIS"
+                        >Management Informations Systems</a
+                      >
+                    </h4>
+                    <p class="text-gray-600">Covenant University, 2022-2026</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white p-5 !rounded-lg shadow-sm card21" >
+                <div class="flex flex-wrap md:flex-nowrap items-start md:items-center gap-4">
+                  <div
+                    class="w-16 h-16 flex items-center justify-center text-primary bg-blue-50 !rounded-lg flex-shrink-0"
+                  >
+                    <i class="ri-award-line text-xl"></i>
+                  </div>
+                  <div class="flex-1 pt-1 md:pt-0">
+                    <h4 class="text-lg font-bold text-gray-800">
+                      prompt engineering certification
+                    </h4>
+                    <p class="text-gray-600">OBtranslate, 2022</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white p-5 !rounded-lg shadow-sm card21">
+                <div class="flex flex-wrap md:flex-nowrap items-start md:items-center gap-4">
+                  <div
+                    class="w-16 h-16 flex items-center justify-center text-primary bg-blue-50 !rounded-lg flex-shrink-0"
+                  >
+                    <i class="ri-award-line text-xl"></i>
+                  </div>
+                  <div class="flex-1 pt-1 md:pt-0">
+                    <h4 class="text-lg font-bold text-gray-800">
+                      COMPTIA IT essentials
+                    </h4>
+                    <p class="text-gray-600">CISCO, 2023</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white p-5 !rounded-lg shadow-sm card21">
+                <div class="flex flex-wrap md:flex-nowrap items-start md:items-center gap-4">
+                  <div
+                    class="w-16 h-16 flex items-center justify-center text-primary bg-blue-50 !rounded-lg flex-shrink-0"
+                  >
+                    <i class="ri-award-line text-xl"></i>
+                  </div>
+                  <div class="flex-1 pt-1 md:pt-0">
+                    <h4 class="text-lg font-bold text-gray-800">
+                      Ethical Hacking
+                    </h4>
+                    <p class="text-gray-600">CISCO, 2025</p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="bg-white p-5 !rounded-lg shadow-sm card21">
+                <div class="flex flex-wrap md:flex-nowrap items-start md:items-center gap-4">
+                  <div
+                    class="w-16 h-16 flex items-center justify-center text-primary bg-blue-50 !rounded-lg flex-shrink-0"
+                  >
+                    <i class="ri-award-line text-xl"></i>
+                  </div>
+                  <div class="flex-1 pt-1 md:pt-0">
+                    <h4 class="text-lg font-bold text-gray-800">
+                      Project Certificate
+                    </h4>
+                    <p class="text-gray-600">Coursera, 2024</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 md:mt-16 reveal">
+          <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-gray-800 text-center">
+            Skills Distribution
+          </h3>
+          <div class="relative">
+            <div id="skills-chart" class="w-full h-80 pb-16 md:pb-0"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#FFF5F5]" dark:bg-dark-surface>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">
+            Get In Touch
+          </h2>
+          <div class="h-1 w-24 bg-primary mx-auto mb-6 reveal"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto reveal">
+            Have a project in mind or want to discuss potential opportunities?
+            I'd love to hear from you!
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Contact Form -->
+          <div class="lg:w-3/5 reveal">
+            <div class="bg-white !rounded-lg shadow-md p-8">
+              <h3 class="text-2xl font-bold mb-6 text-gray-800">
+                Send Me a Message
+              </h3>
+              <form id="contact-form" class="px-2 sm:px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Your Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full px-3 py-2 border border-gray-300 !rounded-lg focus:ring-2 focus:ring-primary/20 text-gray-700"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Your Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="w-full px-3 py-2 border border-gray-300 !rounded-lg focus:ring-2 focus:ring-primary/20 text-gray-700"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    class="w-full px-3 py-2 border border-gray-300 !rounded-lg focus:ring-2 focus:ring-primary/20 text-gray-700"
+                    placeholder="Project Inquiry"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-3 py-2 border border-gray-300 !rounded-lg focus:ring-2 focus:ring-primary/20 text-gray-700 resize-none"
+                    placeholder="Tell me about your project..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full sm:w-auto bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors flex items-center justify-center sm:justify-start gap-2"
+                >
+                  <span>Send Message</span>
+                  <i
+                    class="ri-send-plane-line flex items-center justify-center"
+                  ></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Contact Info -->
+          <div class="lg:w-2/5 reveal">
+            <div class="bg-white !rounded-lg shadow-md p-8 mb-8">
+              <h3 class="text-2xl font-bold mb-6 text-gray-800">
+                Contact Information
+              </h3>
+              <div class="space-y-6">
+                <div class="flex flex-wrap items-start gap-4">
+                  <div
+                    class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg mt-1"
+                  >
+                    <i class="ri-map-pin-line text-lg"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-medium text-gray-800 mb-1">Location</h4>
+                    <p class="text-gray-600">Ikorodu, Lagos, Nigeria</p>
+                  </div>
+                </div>
+                
+                <div class="flex flex-wrap items-start gap-4">
+                  <div
+                    class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg mt-1"
+                  >
+                    <i class="ri-mail-line text-lg"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-medium text-gray-800 mb-1">Email</h4>
+                    <a
+                      href="mailto:buchionyeachonam82@gmail.com"
+                      class="text-gray-600 hover:text-primary transition-colors break-all"
+                      >buchionyeachonam82@gmail.com</a
+                    >
+                  </div>
+                </div>
+                
+                <div class="flex flex-wrap items-start gap-4">
+                  <div
+                    class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg mt-1"
+                  >
+                    <i class="ri-phone-line text-lg"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-medium text-gray-800 mb-1">Phone</h4>
+                    <a
+                      href="tel:+234 808 569 2620"
+                      class="text-gray-600 hover:text-primary transition-colors"
+                      >+234 808 569 2620</a
+                    >
+                  </div>
+                </div>
+                
+                <div class="flex flex-wrap items-start gap-4">
+                  <div
+                    class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-primary bg-blue-50 !rounded-lg mt-1"
+                  >
+                    <i class="ri-time-line text-lg"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-medium text-gray-800 mb-1">
+                      Working Hours
+                    </h4>
+                    <p class="text-gray-600">
+                      Monday - Wednesday: 10AM - 5PM WAT
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white !rounded-lg shadow-md p-8">
+              <h3 class="text-xl font-bold mb-6 text-gray-800">
+                Connect With Me
+              </h3>
+              <div class="flex gap-3">
+                <a
+                  href="https://www.linkedin.com/in/benedict-onyeachonam/?trk=opento_sprofile_topcard"
+                  class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-blue-50 !rounded-lg transition-colors"
+                >
+                  <i class="ri-linkedin-line ri-lg"></i>
+                </a>
+                <a
+                  href="https://github.com/simplyMeister"
+                  class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-blue-50 !rounded-lg transition-colors"
+                >
+                  <i class="ri-github-line ri-lg"></i>
+                </a>
+                <a
+                  href="https://dribbble.com/BenCruze"
+                  class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-blue-50 !rounded-lg transition-colors"
+                >
+                  <i class="ri-dribbble-line ri-lg"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@buchionyeachonam5593"
+                  class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-blue-50 !rounded-lg transition-colors"
+                >
+                  <i class="ri-youtube-line ri-lg"></i>
+                </a>
+                <a
+                  href="https://x.com/Buch_Meister"
+                  class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-blue-50 !rounded-lg transition-colors"
+                >
+                  <i class="ri-twitter-x-line ri-lg"></i>
+                </a>
+              </div>
+              <div class="mt-8">
+                <h4 class="font-medium text-gray-800 mb-4">My Location</h4>
+                <div class="w-full h-48 !rounded-lg overflow-hidden">
+                  <img
+                    src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png"
+                    alt="Location Map"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <a href="#" class="text-2xl font-['Pacifico'] text-white mb-6 md:mb-0"
+            >Buchi O.</a
+          >
+          <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+            <a
+              href="#about"
+              class="text-gray-300 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-300 hover:text-white transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-300 hover:text-white transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-300 hover:text-white transition-colors"
+              >Contact</a
+            >
+          </nav>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            &copy; 2025 Buchi Onyeachonam. All rights reserved.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/benedict-onyeachonam/?trk=opento_sprofile_topcard"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i
+                class="ri-linkedin-line w-5 h-5 flex items-center justify-center"
+              ></i>
+            </a>
+            <a
+              href="https://github.com/simplyMeister"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i
+                class="ri-github-line w-5 h-5 flex items-center justify-center"
+              ></i>
+            </a>
+            <a
+              href="https://dribbble.com/BenCruze"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i
+                class="ri-dribbble-line w-5 h-5 flex items-center justify-center"
+              ></i>
+            </a>
+            <a
+              href="https://x.com/Buch_Meister"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i
+                class="ri-twitter-x-line w-5 h-5 flex items-center justify-center"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white !rounded-lg shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90"
+    >
+      <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content p-0 !rounded-lg overflow-hidden">
+        <div class="relative h-64 bg-gray-100">
+          <img
+            id="modal-image"
+            src=""
+            alt="Project Image"
+            class="w-full h-full object-cover object-top"
+          />
+          <button
+            id="close-modal"
+            class="absolute top-4 right-4 w-10 h-10 bg-white/80 !rounded-lg flex items-center justify-center text-gray-700 hover:text-primary transition-colors"
+          >
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <div class="p-8">
+          <h3
+            id="modal-title"
+            class="text-2xl font-bold mb-4 text-gray-800"
+          ></h3>
+          <div id="modal-tags" class="flex flex-wrap gap-2 mb-6"></div>
+          <p id="modal-description" class="text-gray-600 mb-6"></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Project Overview</h4>
+              <ul id="modal-features" class="space-y-2 text-gray-600"></ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Technologies Used</h4>
+              <ul id="modal-technologies" class="space-y-2 text-gray-600"></ul>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#"
+              id="modal-live-link"
+              class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors flex items-center gap-2 whitespace-nowrap"
+            >
+              <i
+                class="ri-external-link-line w-5 h-5 flex items-center justify-center"
+              ></i>
+              <span>Live Demo</span>
+            </a>
+            <a
+              href="#"
+              id="modal-github-link"
+              class="border border-gray-300 px-6 py-3 !rounded-button hover:border-primary hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap"
+            >
+              <i
+                class="ri-github-line w-5 h-5 flex items-center justify-center"
+              ></i>
+              <span>View Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="index.js"></script>
+  </body>
+</html>
