@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         id: 3,
         title: "ICOC ikorodu",
-        image: "/ikorodu.png",
+        image: "/Ikorodu.png",
         tags: ["HTML", "JS", "Paystack"],
         description:
           "A church website designed to showcase the organization's mission, vision, and activities, while facilitating seamless tithe contributions and enhancing engagement across multiple locations.",
