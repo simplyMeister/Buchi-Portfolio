@@ -388,47 +388,52 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Typed text effect
-    const typedTextElement = document.querySelector(".typed-text");
-    const phrases = [
-      "Junior Frontend Developer",
-      " Upcoming UI/UX Designer",
-      "Creative Problem Solver",
-      "Team Builder",
-      "Saxophonist",
-    ];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 50;
-    function typeText() {
-      const currentPhrase = phrases[phraseIndex];
-      if (isDeleting) {
-        typedTextElement.textContent = currentPhrase.substring(
-          0,
-          charIndex - 1
-        );
-        charIndex--;
-        typingSpeed = 50;
-      } else {
-        typedTextElement.textContent = currentPhrase.substring(
-          0,
-          charIndex + 1
-        );
-        charIndex++;
-        typingSpeed = 100;
-      }
-      if (!isDeleting && charIndex === currentPhrase.length) {
-        isDeleting = true;
-        typingSpeed = 1500; // Pause at end of phrase
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        typingSpeed = 500; // Pause before typing next phrase
-      }
-      setTimeout(typeText, typingSpeed);
-    }
-    setTimeout(typeText, 1000);
+  const typedTextElement = document.querySelector(".typed-text");
+const phrases = [
+  "Junior Frontend Developer",
+  "Upcoming UI/UX Designer",
+  "Creative Problem Solver",
+  "Team Builder",
+  "Saxophonist",
+  "Entrepreneur"
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+
+function typeText() {
+  const currentPhrase = phrases[phraseIndex];
+
+  // Update the text
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
+  }
+
+  typedTextElement.textContent = currentPhrase.substring(0, charIndex);
+
+  // If full phrase is typed
+  if (!isDeleting && charIndex === currentPhrase.length) {
+    isDeleting = true;
+    typingSpeed = 1500;
+  }
+  // If phrase is fully deleted
+  else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    typingSpeed = 500;
+  } else {
+    typingSpeed = isDeleting ? 50 : 100;
+  }
+
+  setTimeout(typeText, typingSpeed);
+}
+
+setTimeout(typeText, 1000);
+
     // Skills chart code with legend below on mobile devices
     const skillsChart = echarts.init(document.getElementById("skills-chart"));
 
