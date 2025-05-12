@@ -59,6 +59,24 @@
   animation: float-3d 8s ease-in-out infinite;
 }
 
+.typed-text {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation: blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+
 /* Particle Animation */
 @keyframes particle-float {
 
