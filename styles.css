@@ -752,3 +752,9 @@ textarea:focus {
 .parallax {
   transition: transform 0.3s ease-out;
 }
+
+
+.label:hover .title:last-child {
+  opacity: 0;
+  visibility: hidden;
+}
