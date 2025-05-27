@@ -506,6 +506,7 @@ label::before {
 
 .label .title {
   font-size: 17px;
+  margin-left : 20px;
   color: black;
   transition: all 0.4s ease;
   position: absolute;
